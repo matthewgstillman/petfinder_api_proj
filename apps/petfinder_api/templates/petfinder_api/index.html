@@ -8,6 +8,8 @@
 {% block content %}
 <div class="container">
     <h1>Petfinder API</h1>
-    <h6>{{ pet_array }}</h6>
+    {% for pet in pet_array %}
+    <h6>{{ pet }}</h6>
+    {% endfor }
 </div>
 {% endblock %}
