@@ -6,8 +6,12 @@
 
 
 {% block content %}
+<a href="/">Go Back</a>
 <div class="container">
     <h1>Petfinder API</h1>
     <h2>Dog Breeds</h2>
+    {% for breed in dog_breeds %}
+    <h6>{{ breed }}</h6>
+    {% endfor %}
 </div>
 {% endblock %}

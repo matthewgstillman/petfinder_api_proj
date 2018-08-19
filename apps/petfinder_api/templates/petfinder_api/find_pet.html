@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-<title>Bird Breeds</title>
+<title>Find A Pet</title>
 {% endblock%}
 
 
@@ -9,9 +9,8 @@
 <a href="/">Go Back</a>
 <div class="container">
     <h1>Petfinder API</h1>
-    <h2>Bird Breeds</h2>
-    {% for breed in bird_breeds %}
-    <h6>{{ breed }}</h6>
-    {% endfor %}
+    <h2>Find A Pet</h2>
+    <h6>{{ petfinder_results }}</h6>
+    {{ find_pet }}
 </div>
 {% endblock %}
