@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Barnyard Breeds</title>
+{% endblock%}
+
+
+{% block content %}
+<div class="container">
+    <h1>Petfinder API</h1>
+    <h2>Barnyard Breeds</h2>
+    {% for breed in barnyard_breeds %}
+    <h6>{{ breed }}</h6>
+    {% endfor %}
+</div>
+{% endblock %}
