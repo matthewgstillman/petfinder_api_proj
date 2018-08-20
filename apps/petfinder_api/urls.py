@@ -8,4 +8,5 @@ urlpatterns = [
     url(r'^dog_breeds$', views.dog_breeds, name="dog_breeds"),
     url(r'^find_pet$', views.find_pet, name="find_pet"),
     url(r'^reptile_breeds$', views.reptile_breeds, name="reptile_breeds"),
+    url(r'^pet_search$', views.pet_search, name="pet_search"),
 ]

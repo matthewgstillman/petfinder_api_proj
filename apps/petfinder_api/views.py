@@ -163,3 +163,12 @@ def reptile_breeds(request):
         'reptile_breeds': reptile_breeds,
     }
     return render(request, 'petfinder_api/reptile_breeds.html', context)
+
+def pet_search(request):
+    if request.method == 'POST':
+        animal_type = request.POST
+        print (animal_type)
+        print (request.POST)
+    context = {
+    }
+    return render(request, 'petfinder_api/pet_search.html',context)
