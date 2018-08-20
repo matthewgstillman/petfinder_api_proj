@@ -21,7 +21,13 @@
     <br>
     <h6><b>Age: </b>{{ pet.0.age.values.0 }}</h6>
     <h6><b>Sex: </b>{{ pet.0.sex.values.0 }}</h6>
-    <p><b>Description: </b>{{ pet.0.description.values.0}}</p>
+    <h6><b>Description: </b>{{ pet.0.description.values.0}}</h6>
+    <h6><b>ID: </b>{{ pet.0.id.values.0}}</h6>
+    <h6><b>Mix: </b>{{ pet.0.mix.values.0.title }}</h6>
+    <h6><b>Contact: </b>{{ pet.0.contact.city.values.0 }}</h6>
+    <h6><b>Zip Code: </b>{{ pet.0.contact.zip.values.0 }}</h6>
+    <h6><b>Phone: </b>{{ pet.0.contact.phone.values.0 }}</h6>
+    <h6><b>Email: </b><a href="mailto:{{ pet.0.contact.email.values.0 }}">{{ pet.0.contact.email.values.0 }}</a></h6>
     <h6>{{ pet }}</h6>
 </div>
 {% endblock %}
