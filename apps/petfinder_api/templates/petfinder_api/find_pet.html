@@ -9,8 +9,19 @@
 <a href="/">Go Back</a>
 <div class="container">
     <h1>Petfinder API</h1>
-    <h2>Find A Pet</h2>
-    <h6>{{ petfinder_results }}</h6>
-    {{ find_pet }}
+    <h2>Find A Cat</h2>
+    <h2><b>Name: </b>{{ pet.0.name.values.0 }}</h2>
+    <h6><b>Shelter ID: </b>{{ pet.0.shelterId.values.0 }}</h6>
+    <h6><b>Pet ID: </b>{{ pet.0.shelterPetId.values.0 }}</h6>
+    {% for photo in pet.0.media.values.0.photo %}
+        <h6><a href="{{ photo.values.0 }}">{{ photo.values.0 }}</h6>
+            </a>
+        <img src="{{ photo.values.0 }}" alt="{{ pet.0.name.values.0 }}">
+    {% endfor %}
+    <br>
+    <h6><b>Age: </b>{{ pet.0.age.values.0 }}</h6>
+    <h6><b>Sex: </b>{{ pet.0.sex.values.0 }}</h6>
+    <p><b>Description: </b>{{ pet.0.description.values.0}}</p>
+    <h6>{{ pet }}</h6>
 </div>
 {% endblock %}
