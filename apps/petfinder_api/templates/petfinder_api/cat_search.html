@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Cat Search</title>
+{% endblock%}
+
+
+{% block content %}
+<a href="/">Go Back</a>
+<div class="container">
+    <h1>Petfinder API</h1>
+    <h2>Search for a Cat</h2>
+    <form action="/cat_search" method="POST">
+        {% csrf_token %}
+        <h6>Select Cat Breed</h6>
+        <select name="cat_breed">
+            
+        </select>
+        <br>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <br>
+</div>
+{% endblock %}

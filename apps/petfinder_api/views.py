@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+# from forms import dogform
 import requests
 import petfinder
 import petpy
@@ -166,9 +167,80 @@ def reptile_breeds(request):
 
 def pet_search(request):
     if request.method == 'POST':
-        animal_type = request.POST
+        animal_type = request.POST['animal_type']
         print (animal_type)
-        print (request.POST)
+        if animal_type == 'barnyard':
+            context = {
+                'animal_type': animal_type,
+            }
+            return render(request, 'petfinder_api/dog_search.html',context)
+        if animal_type == 'bird':
+            context = {
+                'animal_type': animal_type,
+            }
+            return render(request, 'petfinder_api/bird_search.html',context)
+        if animal_type == 'cat':
+            context = {
+                'animal_type': animal_type,
+            }
+            return redirect("/cat_search", context)
+            return render(request, 'petfinder_api/cat_search.html',context)
+        if animal_type == 'dog':
+            context = {
+                'animal_type': animal_type,
+            }
+            return render(request, 'petfinder_api/dog_search.html',context)
+        if animal_type == 'reptile':
+            context = {
+                'animal_type': animal_type,
+            }
+            return render(request, 'petfinder_api/reptile_search.html',context)
+    else:
+        # form = dogform
+        context = {
+        # 'form': form,
+        }
+        return render(request, 'petfinder_api/pet_search.html',context)
+
+def bird_search(request):
     context = {
     }
-    return render(request, 'petfinder_api/pet_search.html',context)
+    return render(request, 'petfinder_api/bird_search.html',context)
+
+def barnyard_search(request):
+    context = {
+    }
+    return render(request, 'petfinder_api/barnyard_search.html',context)
+
+def cat_search(request):
+    context = {
+    }
+    return render(request, 'petfinder_api/cat_search.html',context)
+
+def dog_search(request):
+    context = {
+    }
+    return render(request, 'petfinder_api/dog_search.html',context)
+
+def reptile_search(request):
+    context = {
+    }
+    return render(request, 'petfinder_api/reptile_search.html',context)
+
+
+
+
+# def pet_search(request):
+#     if request.method == 'POST':
+#         animal_type = request.POST['animal_type']
+#         print (animal_type)
+#         context = {
+#             'animal_type': animal_type,
+#             }
+#         return render(request, 'petfinder_api/pet_search.html',context)
+#     else:
+#         # form = dogform
+#         context = {
+#         # 'form': form,
+#         }
+#         return render(request, 'petfinder_api/pet_search.html',context)

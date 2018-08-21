@@ -13,7 +13,7 @@ CAT_BREED_CHOICES = (
     ('NEBELUNG','Nebelung'),('NORWEGIAN-FOREST-CAT','Norwegian-Forest-Cat'),('OCICAT','Ocicat'),('ORIENTAL-LONG-HAIR','Oriental-Long-Hair'),('ORIENTAL-SHORT-HAIR','Oriental Short Hair'),
     ('ORIENTAL-TABBY','Oriental-Tabby'),('PERSIAN','Persian'),('PIXIE-BOB','Pixie-Bob'),('RAGAMUFFIN','Ragamuffin'),('RAGDOLL','Ragdoll'),('RUSSIAN-BLUE','Russian-Blue'),('SCOTTISH-FOLD','Scottish-Fold'),('SELKIRK-REX','Selkirk-Rex'),('SIAMESE','Siamese'),
     ('SIBERIAN','Siberian'),('SILVER','Silver'),('SINGAPURA','Singapura'),('SNOWSHOE','Snowshoe'),('SOMALI','Somali'),('SPHYNX/HAIRLESS-CAT','Sphynx/Hairless-Cat'),('TABBY','Tabby'),('TIGER','Tiger'),
-    ('TOKINESE','Tonkinese'),('TORBIE','Torbie'),('TORTOISESHELL','Tortoiseshell'),('TURKISH-ANGORA','Turkish-Angora')
+    ('TOKINESE','Tonkinese'),('TORBIE','Torbie'),('TORTOISESHELL','Tortoiseshell'),('TURKISH-ANGORA','Turkish-Angora'),
     ('TURKISH_VAN','Turkish_Van'),('TUXEDO','Tuxedo')
 )
 
@@ -79,5 +79,3 @@ DOG_BREED_CHOICES = (
     ( 'WIREHAIRED-POINTING-GRIFFON' ,  'Wirehaired-Pointing-Griffon' ),( 'WIREHAIRED-TERRIER' ,  'Wirehaired-Terrier' ),( 'XOLOITZCUINTLE/MEXICAN-HAIRLESS' ,  'Xoloitzcuintle/Mexican-Hairless' ),( 'YELLOW-LABRADOR-RETRIEVER' ,  'Yellow-Labrador-Retriever' ),( 'YORKSHIRE-TERRIER-YORKIE' ,  'Yorkshire-Terrier-Yorkie' ),
 )
 
-class AnimalType(forms.Form):
-    your_name = forms.CharField(label='Your name', max_length=100)

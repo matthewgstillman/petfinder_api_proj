@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block title %}
-<title>Pet Search</title>
+<title>Bird Search</title>
 {% endblock%}
 
 
@@ -9,7 +9,7 @@
 <a href="/">Go Back</a>
 <div class="container">
     <h1>Petfinder API</h1>
-    <h2>Search for a pet</h2>
+    <h2>Search for a Bird</h2>
     <form action="/pet_search" method="POST">
         {% csrf_token %}
         <h6>Select Animal Type</h6>
