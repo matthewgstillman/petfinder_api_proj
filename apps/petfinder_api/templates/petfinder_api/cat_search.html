@@ -14,7 +14,9 @@
         {% csrf_token %}
         <h6>Select Cat Breed</h6>
         <select name="cat_breed">
-            
+            {% for breed in cat_breeds %}
+                <option value="{{ breed }}">{{ breed.title }}</option>
+            {% endfor %}
         </select>
         <br>
         <br>

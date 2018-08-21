@@ -213,7 +213,28 @@ def barnyard_search(request):
     return render(request, 'petfinder_api/barnyard_search.html',context)
 
 def cat_search(request):
+    cat_breeds = []
+    Petfinder = petpy.api.Petfinder('a2a128f9fc017e107d12f400c579ba54')
+    breed_list = Petfinder.breed_list('cat', outputformat='json', return_df=False)
+    print (breed_list)
+    print (breed_list)
+    breed = breed_list['petfinder']['breeds']['breed']
+    print (breed)
+    petfinder = breed_list['petfinder']
+    print (petfinder)
+    breeds = petfinder['breeds']
+    print (breeds)
+    breed_type = breeds['breed']
+    print (breed_type)
+    breed_name = breed_type
+    print (breed_name)
+    for breed in breed_name:
+        print (breed['$t'])
+        cat_breeds.append(str(breed['$t']))
+    print (cat_breeds)
     context = {
+        'cat_breeds': cat_breeds,
+        'breed_list': breed_list,
     }
     return render(request, 'petfinder_api/cat_search.html',context)
 
