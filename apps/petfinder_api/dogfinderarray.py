@@ -66,3 +66,8 @@ dog_array = [
         'Wirehaired-Terrier','Xoloitzcuintle/Mexican-Hairless',
         'Yellow-Labrador-Retriever','Yorkshire-Terrier-Yorkie'
     ]
+
+for dog in dog_array:
+    dog_string = " '" + str(dog) + "' "
+    dog_string_upper = dog_string.upper()
+    print ("(" + str(dog_string_upper)  + ", " + str(dog_string) + "),")
