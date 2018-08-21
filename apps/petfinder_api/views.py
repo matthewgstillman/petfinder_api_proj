@@ -304,7 +304,27 @@ def dog_search(request):
     return render(request, 'petfinder_api/dog_search.html',context)
 
 def reptile_search(request):
+    reptile_breeds = []
+    Petfinder = petpy.api.Petfinder('a2a128f9fc017e107d12f400c579ba54')
+    breed_list = Petfinder.breed_list('reptile', outputformat='json', return_df=False)
+    print (breed_list)
+    breed = breed_list['petfinder']['breeds']['breed']
+    print (breed)
+    petfinder = breed_list['petfinder']
+    print (petfinder)
+    breeds = petfinder['breeds']
+    print (breeds)
+    breed_type = breeds['breed']
+    print (breed_type)
+    breed_name = breed_type
+    print breed_name
+    for breed in breed_name:
+        print (breed['$t'])
+        reptile_breeds.append(str(breed['$t']))
+    print (reptile_breeds)
     context = {
+        'breed_list': breed_list,
+        'reptile_breeds': reptile_breeds,
     }
     return render(request, 'petfinder_api/reptile_search.html',context)
 
