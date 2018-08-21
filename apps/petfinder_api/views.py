@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 # from forms import dogform
+import wikipedia
 import requests
 import petfinder
 import petpy
@@ -133,6 +134,34 @@ def find_pet(request):
         'status': status,
     }
     return render(request, 'petfinder_api/find_pet.html', context)
+
+def find_dog(request):
+    Petfinder = petpy.api.Petfinder('a2a128f9fc017e107d12f400c579ba54')
+    find_pet = Petfinder.pet_find(95112, animal="dog", outputformat='json', return_df=False)
+    # print (find_pet)
+    petfinder_results = find_pet['petfinder']
+    # print (petfinder_results)
+    pets = petfinder_results['pets']
+    # print(pets)
+    pet = pets['pet']
+    # for majorkey, subdict in pet.iteritems():
+    #     print majorkey
+    # for subkey, value in subdict.iteritems():
+    #         print subkey, value
+    header = petfinder_results['header']
+    # print (header)
+    status = header['status']
+    # print (status)
+    i = 0
+    context = {
+        'header': header,
+        'find_pet': find_pet,
+        'petfinder_results': petfinder_results,
+        'pet': pet,
+        'pets': pets,
+        'status': status,
+    }
+    return render(request, 'petfinder_api/find_dog.html', context)
 
 def index(request):
     context = {

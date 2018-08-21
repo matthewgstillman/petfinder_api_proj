@@ -1,0 +1,332 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Find A Pet</title>
+{% endblock%}
+
+
+{% block content %}
+<a href="/">Go Back</a>
+<div class="container">
+    <h1>Petfinder API</h1>
+    <h2>Find A Dog</h2>
+    <h2></b>{{ pet.0.name.values.0 }}</h2>
+    <h6><b>Shelter ID: </b>{{ pet.0.shelterId.values.0 }}</h6>
+    <h6><b>Pet ID: </b>{{ pet.0.shelterPetId.values.0 }}</h6>
+    <img src="{{ pet.0.media.values.0.photo.2.values.0 }}" alt="">
+    <br>
+    <br>
+    <img src="{{ pet.0.media.values.0.photo.7.values.0 }}" alt="">
+    <br>
+    <br>
+    <img src="{{ pet.0.media.values.0.photo.12.values.0 }}" alt="">
+    <br>
+    <br>
+    <h6><b>Age: </b>{{ pet.0.age.values.0 }}</h6>
+    <h6><b>Sex: </b>{{ pet.0.sex.values.0 }}</h6>
+    <h6><b>Description: </b>{{ pet.0.description.values.0 }}</h6>
+    <h6><b>ID: </b>{{ pet.0.id.values.0}}</h6>
+    <h6><b>Mix: </b>{{ pet.0.mix.values.0.title }}</h6>
+    <h6><b>Location: </b>{{ pet.0.contact.city.values.0 }}, {{ pet.0.contact.state.values.0 }} {{ pet.0.contact.zip.values.0 }}</h6>
+    <h6><b>Email: </b><a href="mailto:{{ pet.0.contact.email.values.0 }}">{{ pet.0.contact.email.values.0 }}</a></h6>
+    <h6><b>Phone: </b>{{ pet.0.contact.phone.values.0 }}</h6>
+    <br>
+    <h2>{{ pet.1.name.values.0 }}</h2>
+    <h6><b>Shelter ID: </b>{{ pet.1.shelterId.values.0 }}</h6>
+    <h6><b>Pet ID: </b>{{ pet.1.shelterPetId.values.0 }}</h6>
+    <img src="{{ pet.1.media.values.0.photo.2.values.0 }}" alt="">
+    <br>
+    <br>
+    <img src="{{ pet.1.media.values.0.photo.7.values.0 }}" alt="">
+    <br>
+    <br>
+    <img src="{{ pet.1.media.values.0.photo.12.values.0 }}" alt="">
+    <br>
+    <br>
+    <br>
+    <h6><b>Age: </b>{{ pet.1.age.values.0 }}</h6>
+    <h6><b>Sex: </b>{{ pet.1.sex.values.0 }}</h6>
+    <h6><b>Description: </b>{{ pet.1.description.values.0}}</h6>
+    <h6><b>ID: </b>{{ pet.1.id.values.0}}</h6>
+    <h6><b>Mix: </b>{{ pet.1.mix.values.0.title }}</h6>
+    <h6><b>Location: </b>{{ pet.1.contact.city.values.0 }}, {{ pet.1.contact.state.values.0 }} {{ pet.1.contact.zip.values.0 }}</h6>
+    <h6><b>Email: </b><a href="mailto:{{ pet.1.contact.email.values.0 }}">{{ pet.1.contact.email.values.0 }}</a></h6>
+    <h6><b>Phone: </b>{{ pet.1.contact.phone.values.0 }}</h6>
+    <br>
+    <h2>{{ pet.2.name.values.0 }}</h2>
+    <h6><b>Shelter ID: </b>{{ pet.2.shelterId.values.0 }}</h6>
+    <h6><b>Pet ID: </b>{{ pet.2.shelterPetId.values.0 }}</h6>
+    <img src="{{ pet.2.media.values.0.photo.2.values.0 }}" alt="">
+    <br>
+    <br>
+    <img src="{{ pet.2.media.values.0.photo.7.values.0 }}" alt="">
+    <br>
+    <br>
+    <img src="{{ pet.2.media.values.0.photo.12.values.0 }}" alt="">
+    <br>
+    <br>
+    <br>
+    <h6><b>Age: </b>{{ pet.2.age.values.0 }}</h6>
+    <h6><b>Sex: </b>{{ pet.2.sex.values.0 }}</h6>
+    <h6><b>Description: </b>{{ pet.2.description.values.0}}</h6>
+    <h6><b>ID: </b>{{ pet.2.id.values.0}}</h6>
+    <h6><b>Mix: </b>{{ pet.2.mix.values.0.title }}</h6>
+    <h6><b>Location: </b>{{ pet.2.contact.city.values.0 }}, {{ pet.2.contact.state.values.0 }} {{ pet.2.contact.zip.values.0 }}</h6>
+    <h6><b>Email: </b><a href="mailto:{{ pet.2.contact.email.values.0 }}">{{ pet.2.contact.email.values.0 }}</a></h6>
+    <h6><b>Phone: </b>{{ pet.2.contact.phone.values.0 }}</h6>
+    <br>
+    <h2>{{ pet.3.name.values.0 }}</h2>
+    <h6><b>Shelter ID: </b>{{ pet.3.shelterId.values.0 }}</h6>
+    <h6><b>Pet ID: </b>{{ pet.3.shelterPetId.values.0 }}</h6>
+    <img src="{{ pet.3.media.values.0.photo.2.values.0 }}" alt="">
+    <br>
+    <br>
+    <img src="{{ pet.3.media.values.0.photo.7.values.0 }}" alt="">
+    <br>
+    <br>
+    <img src="{{ pet.3.media.values.0.photo.12.values.0 }}" alt="">
+    <br>
+    <br>
+    <h6><b>Age: </b>{{ pet.3.age.values.0 }}</h6>
+    <h6><b>Sex: </b>{{ pet.3.sex.values.0 }}</h6>
+    <h6><b>Description: </b>{{ pet.3.description.values.0}}</h6>
+    <h6><b>ID: </b>{{ pet.3.id.values.0}}</h6>
+    <h6><b>Mix: </b>{{ pet.3.mix.values.0.title }}</h6>
+    <h6><b>Location: </b>{{ pet.3.contact.city.values.0 }}, {{ pet.3.contact.state.values.0 }} {{ pet.3.contact.zip.values.0 }}</h6>
+    <h6><b>Email: </b><a href="mailto:{{ pet.1.contact.email.values.0 }}">{{ pet.3.contact.email.values.0 }}</a></h6>
+    <h6><b>Phone: </b>{{ pet.3.contact.phone.values.0 }}</h6>
+    <br>
+    <h2>{{ pet.4.name.values.0 }}</h2>
+    <h6><b>Shelter ID: </b>{{ pet.4.shelterId.values.0 }}</h6>
+    <h6><b>Pet ID: </b>{{ pet.4.shelterPetId.values.0 }}</h6>
+    <img src="{{ pet.4.media.values.0.photo.2.values.0 }}" alt="">
+    <br>
+    <br>
+    <img src="{{ pet.4.media.values.0.photo.7.values.0 }}" alt="">
+    <br>
+    <br>
+    <img src="{{ pet.4.media.values.0.photo.12.values.0 }}" alt="">
+    <br>
+    <br>
+    <h6><b>Age: </b>{{ pet.4.age.values.0 }}</h6>
+    <h6><b>Sex: </b>{{ pet.4.sex.values.0 }}</h6>
+    <h6><b>Description: </b>{{ pet.4.description.values.0}}</h6>
+    <h6><b>ID: </b>{{ pet.4.id.values.0}}</h6>
+    <h6><b>Mix: </b>{{ pet.4.mix.values.0.title }}</h6>
+    <h6><b>Location: </b>{{ pet.4.contact.city.values.0 }}, {{ pet.4.contact.state.values.0 }} {{ pet.4.contact.zip.values.0 }}</h6>
+    <h6><b>Email: </b><a href="mailto:{{ pet.4.contact.email.values.0 }}">{{ pet.4.contact.email.values.0 }}</a></h6>
+    <h6><b>Phone: </b>{{ pet.4.contact.phone.values.0 }}</h6>
+    <br>
+    <h2>{{ pet.5.name.values.0 }}</h2>
+    <h6><b>Shelter ID: </b>{{ pet.5.shelterId.values.0 }}</h6>
+    <h6><b>Pet ID: </b>{{ pet.5.shelterPetId.values.0 }}</h6>
+    <img src="{{ pet.5.media.values.0.photo.2.values.0 }}" alt="">
+    <br>
+    <br>
+    <img src="{{ pet.5.media.values.0.photo.7.values.0 }}" alt="">
+    <br>
+    <br>
+    <img src="{{ pet.5.media.values.0.photo.12.values.0 }}" alt="">
+    <br>
+    <br>
+    <h6><b>Age: </b>{{ pet.5.age.values.0 }}</h6>
+    <h6><b>Sex: </b>{{ pet.5.sex.values.0 }}</h6>
+    <h6><b>Description: </b>{{ pet.5.description.values.0}}</h6>
+    <h6><b>ID: </b>{{ pet.5.id.values.0}}</h6>
+    <h6><b>Mix: </b>{{ pet.5.mix.values.0.title }}</h6>
+    <h6><b>Location: </b>{{ pet.5.contact.city.values.0 }}, {{ pet.5.contact.state.values.0 }} {{ pet.5.contact.zip.values.0 }}</h6>
+    <h6><b>Email: </b><a href="mailto:{{ pet.5.contact.email.values.0 }}">{{ pet.5.contact.email.values.0 }}</a></h6>
+    <h6><b>Phone: </b>{{ pet.5.contact.phone.values.0 }}</h6>
+    <br>
+    <h2>{{ pet.6.name.values.0 }}</h2>
+    <h6><b>Shelter ID: </b>{{ pet.6.shelterId.values.0 }}</h6>
+    <h6><b>Pet ID: </b>{{ pet.6.shelterPetId.values.0 }}</h6>
+    <img src="{{ pet.6.media.values.0.photo.2.values.0 }}" alt="">
+    <br>
+    <br>
+    <img src="{{ pet.6.media.values.0.photo.7.values.0 }}" alt="">
+    <br>
+    <br>
+    <img src="{{ pet.6.media.values.0.photo.12.values.0 }}" alt="">
+    <br>
+    <br>
+    <h6><b>Age: </b>{{ pet.6.age.values.0 }}</h6>
+    <h6><b>Sex: </b>{{ pet.6.sex.values.0 }}</h6>
+    <h6><b>Description: </b>{{ pet.6.description.values.0}}</h6>
+    <h6><b>ID: </b>{{ pet.6.id.values.0}}</h6>
+    <h6><b>Mix: </b>{{ pet.6.mix.values.0.title }}</h6>
+    <h6><b>Location: </b>{{ pet.6.contact.city.values.0 }}, {{ pet.6.contact.state.values.0 }} {{ pet.6.contact.zip.values.0 }}</h6>
+    <h6><b>Email: </b><a href="mailto:{{ pet.6.contact.email.values.0 }}">{{ pet.6.contact.email.values.0 }}</a></h6>
+    <h6><b>Phone: </b>{{ pet.6.contact.phone.values.0 }}</h6>
+    <br>
+    <h2>{{ pet.6.name.values.0 }}</h2>
+    <h6><b>Shelter ID: </b>{{ pet.6.shelterId.values.0 }}</h6>
+    <h6><b>Pet ID: </b>{{ pet.6.shelterPetId.values.0 }}</h6>
+    <img src="{{ pet.6.media.values.0.photo.2.values.0 }}" alt="">
+    <br>
+    <br>
+    <img src="{{ pet.6.media.values.0.photo.7.values.0 }}" alt="">
+    <br>
+    <br>
+    <img src="{{ pet.6.media.values.0.photo.12.values.0 }}" alt="">
+    <br>
+    <br>
+    <h6><b>Age: </b>{{ pet.6.age.values.0 }}</h6>
+    <h6><b>Sex: </b>{{ pet.6.sex.values.0 }}</h6>
+    <h6><b>Description: </b>{{ pet.6.description.values.0}}</h6>
+    <h6><b>ID: </b>{{ pet.6.id.values.0}}</h6>
+    <h6><b>Mix: </b>{{ pet.6.mix.values.0.title }}</h6>
+    <h6><b>Location: </b>{{ pet.6.contact.city.values.0 }}, {{ pet.6.contact.state.values.0 }} {{ pet.6.contact.zip.values.0 }}</h6>
+    <h6><b>Email: </b><a href="mailto:{{ pet.6.contact.email.values.0 }}">{{ pet.6.contact.email.values.0 }}</a></h6>
+    <h6><b>Phone: </b>{{ pet.6.contact.phone.values.0 }}</h6>
+    <br>
+    <h2>{{ pet.7.name.values.0 }}</h2>
+    <h6><b>Shelter ID: </b>{{ pet.7.shelterId.values.0 }}</h6>
+    <h6><b>Pet ID: </b>{{ pet.7.shelterPetId.values.0 }}</h6>
+    <img src="{{ pet.7.media.values.0.photo.2.values.0 }}" alt="">
+    <br>
+    <br>
+    <img src="{{ pet.7.media.values.0.photo.7.values.0 }}" alt="">
+    <br>
+    <br>
+    <img src="{{ pet.7.media.values.0.photo.12.values.0 }}" alt="">
+    <br>
+    <br>
+    <h6><b>Age: </b>{{ pet.7.age.values.0 }}</h6>
+    <h6><b>Sex: </b>{{ pet.7.sex.values.0 }}</h6>
+    <h6><b>Description: </b>{{ pet.7.description.values.0}}</h6>
+    <h6><b>ID: </b>{{ pet.7.id.values.0}}</h6>
+    <h6><b>Mix: </b>{{ pet.7.mix.values.0.title }}</h6>
+    <h6><b>Location: </b>{{ pet.7.contact.city.values.0 }}, {{ pet.7.contact.state.values.0 }} {{ pet.7.contact.zip.values.0 }}</h6>
+    <h6><b>Email: </b><a href="mailto:{{ pet.7.contact.email.values.0 }}">{{ pet.7.contact.email.values.0 }}</a></h6>
+    <h6><b>Phone: </b>{{ pet.7.contact.phone.values.0 }}</h6>
+    <br>
+    <h2>{{ pet.8.name.values.0 }}</h2>
+    <h6><b>Shelter ID: </b>{{ pet.8.shelterId.values.0 }}</h6>
+    <h6><b>Pet ID: </b>{{ pet.8.shelterPetId.values.0 }}</h6>
+    <img src="{{ pet.8.media.values.0.photo.2.values.0 }}" alt="">
+    <br>
+    <br>
+    <img src="{{ pet.8.media.values.0.photo.7.values.0 }}" alt="">
+    <br>
+    <br>
+    <img src="{{ pet.8.media.values.0.photo.12.values.0 }}" alt="">
+    <br>
+    <br>
+    <h6><b>Age: </b>{{ pet.8.age.values.0 }}</h6>
+    <h6><b>Sex: </b>{{ pet.8.sex.values.0 }}</h6>
+    <h6><b>Description: </b>{{ pet.8.description.values.0}}</h6>
+    <h6><b>ID: </b>{{ pet.8.id.values.0}}</h6>
+    <h6><b>Mix: </b>{{ pet.8.mix.values.0.title }}</h6>
+    <h6><b>Location: </b>{{ pet.8.contact.city.values.0 }}, {{ pet.8.contact.state.values.0 }} {{ pet.8.contact.zip.values.0 }}</h6>
+    <h6><b>Email: </b><a href="mailto:{{ pet.8.contact.email.values.0 }}">{{ pet.8.contact.email.values.0 }}</a></h6>
+    <h6><b>Phone: </b>{{ pet.8.contact.phone.values.0 }}</h6>
+    <br>
+    <h2>{{ pet.9.name.values.0 }}</h2>
+    <h6><b>Shelter ID: </b>{{ pet.9.shelterId.values.0 }}</h6>
+    <h6><b>Pet ID: </b>{{ pet.9.shelterPetId.values.0 }}</h6>
+    <img src="{{ pet.9.media.values.0.photo.2.values.0 }}" alt="">
+    <br>
+    <br>
+    <img src="{{ pet.9.media.values.0.photo.7.values.0 }}" alt="">
+    <br>
+    <br>
+    <img src="{{ pet.9.media.values.0.photo.12.values.0 }}" alt="">
+    <br>
+    <br>
+    <h6><b>Age: </b>{{ pet.9.age.values.0 }}</h6>
+    <h6><b>Sex: </b>{{ pet.9.sex.values.0 }}</h6>
+    <h6><b>Description: </b>{{ pet.9.description.values.0}}</h6>
+    <h6><b>ID: </b>{{ pet.9.id.values.0}}</h6>
+    <h6><b>Mix: </b>{{ pet.9.mix.values.0.title }}</h6>
+    <h6><b>Location: </b>{{ pet.9.contact.city.values.0 }}, {{ pet.9.contact.state.values.0 }} {{ pet.9.contact.zip.values.0 }}</h6>
+    <h6><b>Email: </b><a href="mailto:{{ pet.9.contact.email.values.0 }}">{{ pet.9.contact.email.values.0 }}</a></h6>
+    <h6><b>Phone: </b>{{ pet.9.contact.phone.values.0 }}</h6>
+    <br>
+    <h2>{{ pet.10.name.values.0 }}</h2>
+    <h6><b>Shelter ID: </b>{{ pet.10.shelterId.values.0 }}</h6>
+    <h6><b>Pet ID: </b>{{ pet.10.shelterPetId.values.0 }}</h6>
+    <img src="{{ pet.10.media.values.0.photo.2.values.0 }}" alt="">
+    <br>
+    <br>
+    <img src="{{ pet.10.media.values.0.photo.7.values.0 }}" alt="">
+    <br>
+    <br>
+    <img src="{{ pet.10.media.values.0.photo.12.values.0 }}" alt="">
+    <br>
+    <br>
+    <h6><b>Age: </b>{{ pet.10.age.values.0 }}</h6>
+    <h6><b>Sex: </b>{{ pet.10.sex.values.0 }}</h6>
+    <h6><b>Description: </b>{{ pet.10.description.values.0}}</h6>
+    <h6><b>ID: </b>{{ pet.10.id.values.0}}</h6>
+    <h6><b>Mix: </b>{{ pet.10.mix.values.0.title }}</h6>
+    <h6><b>Location: </b>{{ pet.10.contact.city.values.0 }}, {{ pet.10.contact.state.values.0 }} {{ pet.10.contact.zip.values.0 }}</h6>
+    <h6><b>Email: </b><a href="mailto:{{ pet.10.contact.email.values.0 }}">{{ pet.10.contact.email.values.0 }}</a></h6>
+    <h6><b>Phone: </b>{{ pet.10.contact.phone.values.0 }}</h6>
+    <br>
+    <br>
+    <h2>{{ pet.11.name.values.0 }}</h2>
+    <h6><b>Shelter ID: </b>{{ pet.11.shelterId.values.0 }}</h6>
+    <h6><b>Pet ID: </b>{{ pet.11.shelterPetId.values.0 }}</h6>
+    <img src="{{ pet.11.media.values.0.photo.2.values.0 }}" alt="">
+    <br>
+    <br>
+    <img src="{{ pet.11.media.values.0.photo.7.values.0 }}" alt="">
+    <br>
+    <br>
+    <img src="{{ pet.11.media.values.0.photo.12.values.0 }}" alt="">
+    <br>
+    <br>
+    <h6><b>Age: </b>{{ pet.11.age.values.0 }}</h6>
+    <h6><b>Sex: </b>{{ pet.11.sex.values.0 }}</h6>
+    <h6><b>Description: </b>{{ pet.11.description.values.0}}</h6>
+    <h6><b>ID: </b>{{ pet.11.id.values.0}}</h6>
+    <h6><b>Mix: </b>{{ pet.11.mix.values.0.title }}</h6>
+    <h6><b>Location: </b>{{ pet.11.contact.city.values.0 }}, {{ pet.11.contact.state.values.0 }} {{ pet.11.contact.zip.values.0 }}</h6>
+    <h6><b>Email: </b><a href="mailto:{{ pet.11.contact.email.values.0 }}">{{ pet.11.contact.email.values.0 }}</a></h6>
+    <h6><b>Phone: </b>{{ pet.11.contact.phone.values.0 }}</h6>
+    <br>
+    <h2>{{ pet.12.name.values.0 }}</h2>
+    <h6><b>Shelter ID: </b>{{ pet.12.shelterId.values.0 }}</h6>
+    <h6><b>Pet ID: </b>{{ pet.12.shelterPetId.values.0 }}</h6>
+    <img src="{{ pet.12.media.values.0.photo.2.values.0 }}" alt="">
+    <br>
+    <br>
+    <img src="{{ pet.12.media.values.0.photo.7.values.0 }}" alt="">
+    <br>
+    <br>
+    <img src="{{ pet.12.media.values.0.photo.12.values.0 }}" alt="">
+    <br>
+    <br>
+    <h6><b>Age: </b>{{ pet.12.age.values.0 }}</h6>
+    <h6><b>Sex: </b>{{ pet.12.sex.values.0 }}</h6>
+    <h6><b>Description: </b>{{ pet.12.description.values.0}}</h6>
+    <h6><b>ID: </b>{{ pet.12.id.values.0}}</h6>
+    <h6><b>Mix: </b>{{ pet.12.mix.values.0.title }}</h6>
+    <h6><b>Location: </b>{{ pet.12.contact.city.values.0 }}, {{ pet.12.contact.state.values.0 }} {{ pet.12.contact.zip.values.0 }}</h6>
+    <h6><b>Email: </b><a href="mailto:{{ pet.12.contact.email.values.0 }}">{{ pet.12.contact.email.values.0 }}</a></h6>
+    <h6><b>Phone: </b>{{ pet.12.contact.phone.values.0 }}</h6>
+    <br>
+    <h2>{{ pet.13.name.values.0 }}</h2>
+    <h6><b>Shelter ID: </b>{{ pet.13.shelterId.values.0 }}</h6>
+    <h6><b>Pet ID: </b>{{ pet.13.shelterPetId.values.0 }}</h6>
+    <img src="{{ pet.13.media.values.0.photo.2.values.0 }}" alt="">
+    <br>
+    <br>
+    <img src="{{ pet.13.media.values.0.photo.7.values.0 }}" alt="">
+    <br>
+    <br>
+    <img src="{{ pet.13.media.values.0.photo.12.values.0 }}" alt="">
+    <br>
+    <br>
+    <h6><b>Age: </b>{{ pet.13.age.values.0 }}</h6>
+    <h6><b>Sex: </b>{{ pet.13.sex.values.0 }}</h6>
+    <h6><b>Description: </b>{{ pet.13.description.values.0}}</h6>
+    <h6><b>ID: </b>{{ pet.13.id.values.0}}</h6>
+    <h6><b>Mix: </b>{{ pet.13.mix.values.0.title }}</h6>
+    <h6><b>Location: </b>{{ pet.13.contact.city.values.0 }}, {{ pet.13.contact.state.values.0 }} {{ pet.13.contact.zip.values.0 }}</h6>
+    <h6><b>Email: </b><a href="mailto:{{ pet.13.contact.email.values.0 }}">{{ pet.13.contact.email.values.0 }}</a></h6>
+    <h6><b>Phone: </b>{{ pet.13.contact.phone.values.0 }}</h6>
+    <br>
+</div>
+{% endblock %}
