@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% extends 'base.html' %}
 
 {% block title %}
 <title>Dog Search</title>
@@ -10,11 +11,13 @@
 <div class="container">
     <h1>Petfinder API</h1>
     <h2>Search for a Dog</h2>
-    <form action="/cat_search" method="POST">
+    <form action="/barnyard_search" method="POST">
         {% csrf_token %}
         <h6>Select Dog Breed</h6>
-        <select name="dog_breed">
-            
+        <select name="barnyard_breed">
+            {% for breed in dog_breeds %}
+                <option value="{{ breed }}">{{ breed.title }}</option>
+            {% endfor %}
         </select>
         <br>
         <br>

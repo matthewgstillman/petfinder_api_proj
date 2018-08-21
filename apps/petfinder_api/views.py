@@ -203,12 +203,52 @@ def pet_search(request):
         return render(request, 'petfinder_api/pet_search.html',context)
 
 def bird_search(request):
+    bird_breeds = []
+    Petfinder = petpy.api.Petfinder('a2a128f9fc017e107d12f400c579ba54')
+    breed_list = Petfinder.breed_list('bird', outputformat='json', return_df=False)
+    print (breed_list)
+    breed = breed_list['petfinder']['breeds']['breed']
+    print (breed)
+    petfinder = breed_list['petfinder']
+    print (petfinder)
+    breeds = petfinder['breeds']
+    print (breeds)
+    breed_type = breeds['breed']
+    print (breed_type)
+    breed_name = breed_type
+    print (breed_name)
+    for breed in breed_name:
+        print (breed['$t'])
+        bird_breeds.append(str(breed['$t']))
+    print (bird_breeds)
     context = {
+        'breed_list': breed_list,
+        'bird_breeds': bird_breeds,
     }
     return render(request, 'petfinder_api/bird_search.html',context)
 
 def barnyard_search(request):
+    barnyard_breeds = []
+    Petfinder = petpy.api.Petfinder('a2a128f9fc017e107d12f400c579ba54')
+    breed_list = Petfinder.breed_list('barnyard', outputformat='json', return_df=False)
+    print (breed_list)
+    breed = breed_list['petfinder']['breeds']['breed']
+    print (breed)
+    petfinder = breed_list['petfinder']
+    print (petfinder)
+    breeds = petfinder['breeds']
+    print (breeds)
+    breed_type = breeds['breed']
+    print (breed_type)
+    breed_name = breed_type
+    print (breed_name)
+    for breed in breed_name:
+        print (breed['$t'])
+        barnyard_breeds.append(str(breed['$t']))
+    print (barnyard_breeds)
     context = {
+        'barnyard_breeds': barnyard_breeds,
+        'breed_list': breed_list,
     }
     return render(request, 'petfinder_api/barnyard_search.html',context)
 
@@ -239,7 +279,27 @@ def cat_search(request):
     return render(request, 'petfinder_api/cat_search.html',context)
 
 def dog_search(request):
+    dog_breeds = []
+    Petfinder = petpy.api.Petfinder('a2a128f9fc017e107d12f400c579ba54')
+    breed_list = Petfinder.breed_list('dog', outputformat='json', return_df=False)
+    print (breed_list)
+    breed = breed_list['petfinder']['breeds']['breed']
+    print (breed)
+    petfinder = breed_list['petfinder']
+    print (petfinder)
+    breeds = petfinder['breeds']
+    print (breeds)
+    breed_type = breeds['breed']
+    print (breed_type)
+    breed_name = breed_type
+    print (breed_name)
+    for breed in breed_name:
+        print (breed['$t'])
+        dog_breeds.append(str(breed['$t']))
+    print (dog_breeds)
     context = {
+        'breed_list': breed_list,
+        'dog_breeds': dog_breeds,
     }
     return render(request, 'petfinder_api/dog_search.html',context)
 

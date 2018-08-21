@@ -10,15 +10,13 @@
 <div class="container">
     <h1>Petfinder API</h1>
     <h2>Search for a Bird</h2>
-    <form action="/pet_search" method="POST">
+    <form action="/bird_search" method="POST">
         {% csrf_token %}
-        <h6>Select Animal Type</h6>
-        <select name="animal_type">
-            <option value="barnyard">Barnyard Animal</option>
-            <option value="bird">Bird</option>
-            <option value="cat">Cat</option>
-            <option value="dog">Dog</option>
-            <option value="reptile">Reptile</option>
+        <h6>Select Bird Breed</h6>
+        <select name="barnyard_breed">
+            {% for breed in bird_breeds %}
+                <option value="{{ breed }}">{{ breed.title }}</option>
+            {% endfor %}
         </select>
         <br>
         <br>
