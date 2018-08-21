@@ -14,5 +14,5 @@ urlpatterns = [
     url(r'^barnyard_search$', views.barnyard_search, name="barnyard_search"),
     url(r'^dog_search$', views.dog_search, name="dog_search"),
     url(r'^pet_search$', views.pet_search, name="pet_search"),
-    url(r'^reptile_search$', views.reptile_search, name="reptile_search"),
+    url(r'^reptile_search$', views.reptile_search, name="reptile_search"),url(r'^result$', views.result, name="result"),
 ]

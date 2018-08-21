@@ -358,19 +358,5 @@ def reptile_search(request):
     return render(request, 'petfinder_api/reptile_search.html',context)
 
 
-
-
-# def pet_search(request):
-#     if request.method == 'POST':
-#         animal_type = request.POST['animal_type']
-#         print (animal_type)
-#         context = {
-#             'animal_type': animal_type,
-#             }
-#         return render(request, 'petfinder_api/pet_search.html',context)
-#     else:
-#         # form = dogform
-#         context = {
-#         # 'form': form,
-#         }
-#         return render(request, 'petfinder_api/pet_search.html',context)
+def result(request):
+    return render(request, 'petfinder_api/result.html',context)
