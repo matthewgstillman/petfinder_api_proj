@@ -12,12 +12,16 @@
     <h2>Search for a Cat</h2>
     <form action="/cat_search" method="POST">
         {% csrf_token %}
+        <br>
         <h6>Select Cat Breed</h6>
         <select name="cat_breed">
             {% for breed in cat_breeds %}
                 <option value="{{ breed }}">{{ breed.title }}</option>
             {% endfor %}
         </select>
+        <br>
+        <label for="zip_code">Zip Code: </label>
+        <input id="zip_code" type="number" name="zip_code" value="">
         <br>
         <br>
         <input type="submit" value="Submit">

@@ -9,23 +9,20 @@
 <div class="container">
     <h1>Petfinder API</h1>
     <h2>Find A pet by type</h2>
-    <a href="/barnyard_breeds">Barnyard Animal Breeds</a>
+    <a href="/barnyard_search">Barnyard Animals</a>
     <br>
-    <a href="/bird_breeds">Bird Breeds</a>
+    <a href="/bird_search">Birds</a>
     <br>
-    <a href="/cat_breeds">Cat Breeds</a>
+    <a href="/cat_search">Cats</a>
     <br>
-    <a href="/dog_breeds">Dog Breeds</a>
+    <a href="/dog_search">Dogs</a>
     <br>
-    <a href="/reptile_breeds">Reptile Breeds</a>
+    <a href="/reptile_search">Reptile</a>
     <br>
     <br>
     <form action="/your-name/" method="post">
         <h6>Search for a Pet</h6>
         {% csrf_token %}
-        <label for="zip_code">Zip Code: </label>
-        <input id="zip_code" type="text" name="zip_code" value="">
-        <br>
         <label for="animal">Animal Type: </label>
         <select name="animal">
             <option value="barnyard">Barnyard Animal</option>
@@ -35,7 +32,12 @@
             <option value="reptile">Reptile</option>
         </select>
         <br>
-        <input type="submit" value="OK">
+        <label for="zip_code">Zip Code: </label>
+        <input id="zip_code" type="number" name="zip_code" value="">
+        <br>
+        <input type="submit" value="Submit">
+        <br>
     </form>
+    <br>
 </div>
 {% endblock %}
