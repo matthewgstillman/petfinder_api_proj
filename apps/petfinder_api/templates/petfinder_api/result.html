@@ -10,9 +10,28 @@
 <div class="container">
     <h1>Petfinder API</h1>
     <h2>Pet Search Results</h2>
-    <h6>Cat Breed: {{ session_cat_breed }}<h6>
-    <h6>Zip Code: {{ session_zip_code }}</h6>
-    <br>
+    <h6>Search Results For {{ session_cat_breed }}s near {{ session_zip_code }} <h6>
+    {% if pet %}
+        {% for pet in pet %}
+        <h6>Description: {{ pet.}}</h6>
+        <h1>{{ pet.name.values.0 }}</h1>
+        <img src="{{ pet.media.values.0.photo.2.values.0 }}" alt="{{ pet.name.values.0 }}">
+        <h6>Age: {{ pet.age.values.0}}</h6>
+        {% if pet.shelterId.values.0 %}
+        <h6>Shelter ID: {{ pet.shelterId.values.0 }}</h6>
+        {% endif %}
+        {% if pet.shelterPetId.values.0 %}
+        <h6>Shelter Pet ID: {{ pet.shelterPetId.values.0 }}</h6>
+        {% endif %}
+        <h6>Description: {{ pet.description.values.0}}</h6>
+        <h6><b>ID: </b>{{ pet.id.values.0}}</h6>
+        <h6><b>Mix: </b>{{ pet.mix.values.0.title }}</h6>
+        <h6><b>Location: </b>{{ pet.contact.city.values.0 }}, {{ pet.contact.state.values.0 }} {{ pet.contact.zip.values.0 }}</h6>
+        <h6><b>Email: </b><a href="mailto:{{ pet.contact.email.values.0 }}">{{ pet.contact.email.values.0 }}</a></h6>
+        <h6><b>Phone: </b>{{ pet.contact.phone.values.0 }}</h6>
+        <br>
+        {% endfor %}
+    {% endif %}
     {{pets}}
 </div>
 {% endblock %}
