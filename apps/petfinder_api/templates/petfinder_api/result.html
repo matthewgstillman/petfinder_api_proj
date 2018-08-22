@@ -1,3 +1,6 @@
+{% extends 'base.html' %}
+
+{% block title %}
 <title>Pet Search Result</title>
 {% endblock%}
 
@@ -7,6 +10,9 @@
 <div class="container">
     <h1>Petfinder API</h1>
     <h2>Pet Search Results</h2>
+    <h6>Cat Breed: {{ session_cat_breed }}<h6>
+    <h6>Zip Code: {{ session_zip_code }}</h6>
     <br>
+    {{pets}}
 </div>
 {% endblock %}
