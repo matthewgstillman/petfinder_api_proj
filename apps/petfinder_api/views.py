@@ -306,7 +306,7 @@ def cat_search(request):
             'zip_code': zip_code,
             'session_zip_code': session_zip_code,
         }
-        return render(request, 'petfinder_api/result.html',context)
+        return redirect("/result", context)
     if request.method == 'GET':
         cat_breeds = []
         Petfinder = petpy.api.Petfinder('a2a128f9fc017e107d12f400c579ba54')
