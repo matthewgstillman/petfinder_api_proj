@@ -13,7 +13,7 @@
     <form action="/bird_search" method="POST">
         {% csrf_token %}
         <h6>Select Bird Breed</h6>
-        <select name="barnyard_breed">
+        <select name="bird_breed">
             {% for breed in bird_breeds %}
                 <option value="{{ breed }}">{{ breed.title }}</option>
             {% endfor %}
