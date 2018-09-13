@@ -477,7 +477,7 @@ def dog_search(request):
             'session_dog_breed': session_dog_breed,
             'session_zip_code': session_zip_code,
         }
-        return render(request, 'petfinder_api/result.html',context)
+        return redirect("/result", context)
     if request.method == 'GET':
         request.session['animal'] = 'dog'
         dog_breeds = []
@@ -509,29 +509,76 @@ def dog_search(request):
         return render(request, 'petfinder_api/dog_search.html',context)
 
 def reptile_search(request):
-    reptile_breeds = []
-    Petfinder = petpy.api.Petfinder(api_key['api_key'])
-    breed_list = Petfinder.breed_list('reptile', outputformat='json', return_df=False)
-    print (breed_list)
-    breed = breed_list['petfinder']['breeds']['breed']
-    print (breed)
-    petfinder = breed_list['petfinder']
-    print (petfinder)
-    breeds = petfinder['breeds']
-    print (breeds)
-    breed_type = breeds['breed']
-    print (breed_type)
-    breed_name = breed_type
-    print breed_name
-    for breed in breed_name:
-        print (breed['$t'])
-        reptile_breeds.append(str(breed['$t']))
-    print (reptile_breeds)
-    context = {
-        'breed_list': breed_list,
-        'reptile_breeds': reptile_breeds,
-    }
-    return render(request, 'petfinder_api/reptile_search.html',context)
+    if request.method == 'POST':
+        animal = 'reptile'
+        print(animal)
+        reptile_breeds = []
+        Petfinder = petpy.api.Petfinder(api_key['api_key'])
+        breed_list = Petfinder.breed_list(animal=animal, outputformat='json', return_df=False)
+        print (breed_list)
+        print (breed_list)
+        breed = breed_list['petfinder']['breeds']['breed']
+        print (breed)
+        petfinder = breed_list['petfinder']
+        print (petfinder)
+        breeds = petfinder['breeds']
+        print (breeds)
+        breed_type = breeds['breed']
+        print (breed_type)
+        breed_name = breed_type
+        print (breed_name)
+        for breed in breed_name:
+            print (breed['$t'])
+            reptile_breeds.append(str(breed['$t']))
+        print (reptile_breeds)
+        # POST REQUEST
+        reptile_breed = request.POST['reptile_breed']
+        print(reptile_breed)
+        request.session['reptile_breed'] = reptile_breed
+        session_reptile_breed = request.session['reptile_breed']
+        print ("Session Reptile Breed: " + str(session_reptile_breed))
+        zip_code = request.POST['zip_code']
+        print(zip_code)
+        request.session['zip_code'] = zip_code
+        session_zip_code = request.session['zip_code']
+        request.session['animal_type'] = animal
+        session_animal = request.session['animal']
+        print("Session Animal: " + str(session_animal))
+        context = {
+            'animal': animal,
+            'session_animal': session_animal,
+            'reptile_breed': reptile_breed,
+            'reptile_breeds': reptile_breeds,
+            'session_reptile_breed': session_reptile_breed,
+            'breed_list': breed_list,
+            'zip_code': zip_code,
+            'session_zip_code': session_zip_code,
+        }
+        return redirect("/result", context)
+    if request.method == 'GET':
+        reptile_breeds = []
+        Petfinder = petpy.api.Petfinder(api_key['api_key'])
+        breed_list = Petfinder.breed_list('reptile', outputformat='json', return_df=False)
+        print (breed_list)
+        breed = breed_list['petfinder']['breeds']['breed']
+        print (breed)
+        petfinder = breed_list['petfinder']
+        print (petfinder)
+        breeds = petfinder['breeds']
+        print (breeds)
+        breed_type = breeds['breed']
+        print (breed_type)
+        breed_name = breed_type
+        print breed_name
+        for breed in breed_name:
+            print (breed['$t'])
+            reptile_breeds.append(str(breed['$t']))
+        print (reptile_breeds)
+        context = {
+            'breed_list': breed_list,
+            'reptile_breeds': reptile_breeds,
+        }
+        return render(request, 'petfinder_api/reptile_search.html',context)
 
 
 def result(request):
